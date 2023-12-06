@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'flv-analyzer'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=flv-analyzer",
+                    "--package=flv-analyzer"
+                ],
+                "filter": {
+                    "name": "flv-analyzer",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'flv-analyzer'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=flv-analyzer",
+                    "--package=flv-analyzer"
+                ],
+                "filter": {
+                    "name": "flv-analyzer",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
